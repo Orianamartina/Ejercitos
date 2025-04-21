@@ -22,4 +22,9 @@ class Pikeman(Unit, Transformable):
         transformed_unit = Archer()
         if self.strength_points < transformed_unit.strength_points:
             transformed_unit.set_strength_points(self.strength_points)
+        else:
+            transformed_unit.set_strength_points(
+                self.strength_points
+                - round(self.strength_points - transformed_unit.strength_points / 2)
+            )
         return transformed_unit
