@@ -14,6 +14,7 @@ class Pikeman(Unit, Transformable):
         )
         Transformable.__init__(self, transformation_cost=30)
 
+    @property
     def name(self):
         return "Pikeman"
 
